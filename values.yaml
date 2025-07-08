@@ -1,0 +1,8 @@
+postgresql:
+  architecture: "standalone"
+  auth:
+    existingSecret: "postgresql-credentials"
+    secretKeys:
+        adminPasswordKey: "postgresql-root-password"
+        userPasswordKey: "postgresql-password"
+        replicationPasswordKey: "postgresql-replication-password"

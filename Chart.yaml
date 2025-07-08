@@ -1,0 +1,10 @@
+apiVersion: v2
+name: postgresql-sierra-group
+description: Wrapper chart for Postgresql
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: postgresql
+    version: "16.7.15"  # Especifica la versión del chart de Forgejo que deseas usar
+    repository: "https://charts.bitnami.com/bitnami"  # URL del repositorio de Forgejo
