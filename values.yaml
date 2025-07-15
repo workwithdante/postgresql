@@ -9,9 +9,10 @@ postgresql:
     pullPolicy: Always
     tag: latest
   
-  shmVolume:
-    enabled: false
-
+  extraEnvVars:
+    - name: POSTGRESQL_EXTRA_FLAGS
+      value: cron.database_name=${POSTGRESQL_DATABASE:-${POSTGRES_DB}}
+      
   architecture: "standalone"
   postgresqlSharedPreloadLibraries: "pgaudit, pgcron"
   auth:
