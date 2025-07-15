@@ -1,7 +1,8 @@
 postgresql:
   global:
     security:
-      allowInsecureImages: false
+      allowInsecureImages: true
+
   image:
     registry: gitea.mabecenter.org
     repository: workwithdante/postgresql-mysqlfdw
