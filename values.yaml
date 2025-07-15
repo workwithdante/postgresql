@@ -11,8 +11,6 @@ postgresql:
   architecture: "standalone"
   auth:
     database: demo
-    username: demo
-    password: demo
     existingSecret: "postgresql-credentials"
     secretKeys:
         adminPasswordKey: "postgresql-root-password"
