@@ -3,27 +3,6 @@ postgresql:
     security:
       allowInsecureImages: true
   
-  initdb:
-    scripts:
-      my_pre_init_script.sh: |
-        #!/usr/bin/env bash
-        set -e
-
-        # Ruta del archivo de configuración de PostgreSQL
-        PG_CONF="${PGDATA}/postgresql.conf"
-
-        echo ">> Añadiendo pg_cron y plugin_debugger a preload..."
-
-        {
-          echo ""
-          echo "# Habilitar pg_cron y plugin_debugger"
-          echo "shared_preload_libraries = 'pg_cron, plugin_debugger'"
-          echo ""
-          echo "# Fijar cron.database_name en la base"
-          echo "cron.database_name = '${POSTGRES_DB}'"
-        } >> "$PG_CONF"
-
-        echo ">> Configuración inicial completada."
   image:
     registry: gitea.mabecenter.org
     repository: workwithdante/postgresql-mysqlfdw
