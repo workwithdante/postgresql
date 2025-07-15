@@ -10,7 +10,7 @@ postgresql:
     tag: latest
 
   architecture: "standalone"
-  postgresqlSharedPreloadLibraries: "pgaudit"
+  postgresqlSharedPreloadLibraries: "pgaudit, pgcron"
   auth:
     database: demo
     existingSecret: "postgresql-credentials"
