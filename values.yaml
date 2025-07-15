@@ -1,9 +1,12 @@
 postgresql:
+  global:
+    security:
+      allowInsecureImages: false
   image:
     registry: gitea.mabecenter.org
     repository: workwithdante/postgresql-mysqlfdw
     tag: latest
-    
+
   architecture: "standalone"
   auth:
     database: demo
