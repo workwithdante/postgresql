@@ -6,6 +6,7 @@ postgresql:
   image:
     registry: gitea.mabecenter.org
     repository: workwithdante/postgresql-mysqlfdw
+    pullPolicy: Always
     tag: latest
 
   architecture: "standalone"
