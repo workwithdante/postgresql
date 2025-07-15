@@ -3,7 +3,7 @@ postgresql:
     security:
       allowInsecureImages: true
   
-  preInitDb:
+  initdb:
     scripts:
       my_pre_init_script.sh: |
         #!/usr/bin/env bash
