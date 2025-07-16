@@ -8,13 +8,9 @@ postgresql:
     repository: workwithdante/postgresql-mysqlfdw
     pullPolicy: Always
     tag: latest
-  
-  extraEnvVars:
-    - name: POSTGRESQL_EXTRA_FLAGS
-      value: cron.database_name=${POSTGRESQL_DATABASE:-${POSTGRES_DB}}
 
   architecture: "standalone"
-  postgresqlSharedPreloadLibraries: "pgaudit, pg_cron"
+  postgresqlSharedPreloadLibraries: "pgaudit, pg_cron, plugin_debug"
   auth:
     database: demo
     existingSecret: "postgresql-credentials"
